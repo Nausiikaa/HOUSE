@@ -61,10 +61,18 @@ public class Picture
         pradera.moveVertical(120);
         pradera.changeSize(700);
         pradera.makeVisible();
-        
-        sun.slowMoveVertical(100);
     }
 
+    /**
+     * move down the sun
+     */
+    public void moveSun()
+    {
+        if (sun != null)
+        {
+            sun.slowMoveVertical(100);
+        }
+    }
     /**
      * Change this picture to black/white display
      */
