@@ -62,15 +62,20 @@ public class Picture
         pradera.changeSize(700);
         pradera.makeVisible();
     }
-
+    
     /**
-     * move down the sun
+     * move down the sun, and at the end turn black and white the items
      */
     public void moveSun()
     {
         if (sun != null)
         {
-            sun.slowMoveVertical(100);
+            sun.slowMoveVertical(130);
+            wall.changeColor("black");
+            window.changeColor("white");
+            roof.changeColor("black");
+            sun.changeColor("black");
+            pradera.changeColor("black");
         }
     }
     /**
