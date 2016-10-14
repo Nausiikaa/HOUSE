@@ -16,6 +16,7 @@ public class Picture
     private Triangle roof;
     private Circle sun;
     private Square pradera;
+    private Person person;
     /**
      * Constructor for objects of class Picture
      */
@@ -63,6 +64,23 @@ public class Picture
         pradera.makeVisible();
     }
     
+    
+    /**
+     * create person and move it near the house
+     */
+    public void createPersonMove()
+    {
+        if (wall != null)
+        {
+            person = new Person();
+            person.moveHorizontal(-240);
+            person.moveVertical(8);
+            person.makeVisible();
+            person.slowMoveHorizontal(110);
+        
+        }
+    
+    }
     /**
      * move down the sun, and at the end turn black and white the items
      */
